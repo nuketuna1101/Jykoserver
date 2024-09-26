@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bq/THAoNX7Y=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Jykoserver.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ghj45\\.nuget\\packages\\memorypack\\1.21.3\\memorypack.1.21.3.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\memorypack.core\\1.21.3\\memorypack.core.1.21.3.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\memorypack.generator\\1.21.3\\memorypack.generator.1.21.3.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\serilog\\4.0.1\\serilog.4.0.1.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\serilog.extensions.logging\\8.0.0\\serilog.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghj45\\.nuget\\packages\\serilog.sinks.file\\6.0.0\\serilog.sinks.file.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

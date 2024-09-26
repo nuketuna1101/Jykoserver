@@ -1,0 +1,12 @@
+2024-09-23 17:42:46.638 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-23 17:42:46.665 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-23 17:42:46.671 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-23 17:42:46.693 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-23 17:42:46.693 +09:00 [INF] Hosting environment: Development
+2024-09-23 17:42:46.693 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-23 17:42:46.694 +09:00 [INF] [MyServer] Start Execution.
+2024-09-23 17:42:47.099 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-23 17:42:47.150 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 404 0 null 80.3442ms
+2024-09-23 17:42:47.157 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7233/, Response status code: 404
+2024-09-23 17:44:27.366 +09:00 [INF] Application is shutting down...
+2024-09-23 17:44:27.366 +09:00 [INF] [MyServer] Closing...

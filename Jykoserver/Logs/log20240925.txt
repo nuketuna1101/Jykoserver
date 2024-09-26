@@ -1,0 +1,42 @@
+2024-09-25 16:23:09.930 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-25 16:23:09.949 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-25 16:23:09.954 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-25 16:23:10.001 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-25 16:23:10.001 +09:00 [INF] Hosting environment: Development
+2024-09-25 16:23:10.001 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-25 16:23:10.007 +09:00 [INF] [MyServer] Start Execution.
+2024-09-25 16:23:10.378 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-25 16:23:10.425 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 404 0 null 47.7199ms
+2024-09-25 16:23:10.428 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7233/, Response status code: 404
+2024-09-25 16:23:21.960 +09:00 [INF] Request starting HTTP/1.1 POST https://localhost:7233/api/chat/send-message - application/json 67
+2024-09-25 16:23:21.962 +09:00 [INF] Executing endpoint 'HTTP: POST /api/chat/send-message'
+2024-09-25 16:23:21.966 +09:00 [INF] Executed endpoint 'HTTP: POST /api/chat/send-message'
+2024-09-25 16:23:21.967 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to read parameter "ChatMessage message" from the request body as JSON.
+ ---> System.Text.Json.JsonException: '%' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: '%' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.Log.InvalidJsonRequestBody(HttpContext httpContext, String parameterTypeName, String parameterName, Exception exception, Boolean shouldThrow)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-25 16:23:21.976 +09:00 [INF] Request finished HTTP/1.1 POST https://localhost:7233/api/chat/send-message - 400 null text/plain; charset=utf-8 16.0472ms
+2024-09-25 16:23:28.386 +09:00 [INF] Application is shutting down...
+2024-09-25 16:23:28.386 +09:00 [INF] [MyServer] Closing...
