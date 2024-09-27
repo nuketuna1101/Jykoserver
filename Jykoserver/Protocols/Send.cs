@@ -20,7 +20,7 @@ namespace Jykoserver.Protocols
             Request? req = await MemoryPackSerializer.DeserializeAsync<Request>(httpContext.Request.Body);
             var myGUID = req.UserGUID;
             var myMsg = MemoryPackSerializer.Deserialize<string>(req.Msg);
-
+            /*
             using (var _db = httpContext.RequestServices.GetRequiredService<MyDbContext>())
             {
                 // guid에 해당하는 유저를 db 유저 게임 데이터에서 찾기
@@ -37,6 +37,7 @@ namespace Jykoserver.Protocols
                 // 복붙하고 세이브
                 await _db.SaveChangesAsync();
             }
+            */
             return;
         }
 

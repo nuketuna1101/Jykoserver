@@ -28,3 +28,5 @@ C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\bin\Debug\net8.0\Serilog.Exten
 C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\Jykoserver.csproj.AssemblyReference.cache
 C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\Jykoserver.csproj.Up2Date
+C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\Jykoserver.sourcelink.json
+C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\bin\Debug\net8.0\MemoryPack.Core.dll

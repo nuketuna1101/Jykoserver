@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Jykoserver/1.0.0": {
         "dependencies": {
+          "MemoryPack": "1.21.3",
           "Serilog": "4.0.1",
           "Serilog.Extensions.Logging": "8.0.0",
           "Serilog.Sinks.File": "6.0.0"
@@ -16,6 +17,21 @@
           "Jykoserver.dll": {}
         }
       },
+      "MemoryPack/1.21.3": {
+        "dependencies": {
+          "MemoryPack.Core": "1.21.3",
+          "MemoryPack.Generator": "1.21.3"
+        }
+      },
+      "MemoryPack.Core/1.21.3": {
+        "runtime": {
+          "lib/net8.0/MemoryPack.Core.dll": {
+            "assemblyVersion": "1.21.3.0",
+            "fileVersion": "1.21.3.0"
+          }
+        }
+      },
+      "MemoryPack.Generator/1.21.3": {},
       "Microsoft.Extensions.DependencyInjection/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
@@ -79,6 +95,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MemoryPack/1.21.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cwCtED8y400vMWx/Vp0QCSeEpVFjDU4JwF52VX9WTaqVERUvNqjG9n6osFlmFuytegyXnHvYEu1qRJ8rv/rkbg==",
+      "path": "memorypack/1.21.3",
+      "hashPath": "memorypack.1.21.3.nupkg.sha512"
+    },
+    "MemoryPack.Core/1.21.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ajrYoBWT2aKeH4tlY8q/1C9qK1R/NK+7FkuVOX58ebOSxkABoFTqCR7W+Zk2rakUHZiEgNdRqO67hiRZPq6fLA==",
+      "path": "memorypack.core/1.21.3",
+      "hashPath": "memorypack.core.1.21.3.nupkg.sha512"
+    },
+    "MemoryPack.Generator/1.21.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hYU0TAIarDKnbkNIWvb7P4zBUL+CTahkuNkczsKvycSMR5kiwQ4IfLexywNKX3s05Izp4gzDSPbueepNWZRpWA==",
+      "path": "memorypack.generator/1.21.3",
+      "hashPath": "memorypack.generator.1.21.3.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/8.0.0": {
       "type": "package",

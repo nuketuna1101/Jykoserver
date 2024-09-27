@@ -4,7 +4,8 @@ namespace Jykoserver
 {
     public enum RequestType
     {
-        SEND = 10,      
+        PING = 20,
+        SEND = 30,   
     }
 
     [MemoryPackable]

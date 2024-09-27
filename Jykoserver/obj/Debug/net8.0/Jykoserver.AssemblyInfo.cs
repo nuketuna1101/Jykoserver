@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jykoserver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4f3364ce9724b85379fb41362c87d3ae13e292c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jykoserver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jykoserver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

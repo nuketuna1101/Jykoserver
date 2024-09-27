@@ -16,7 +16,7 @@ public class Program
         // logging
         ConfigureLogging(builder.Logging);
         // dispatcher 
-        Dictionary<RequestType, Func<IProtocol>> dispatcher = RouterHelper.MapDispatcher();
+        Dictionary<RequestType, Func<IProtocol>> dispatcher = RouteDispatcher.MapDispatcher();
 
         var app = builder.Build();
 
@@ -38,19 +38,49 @@ public class Program
 
         // lifetime logging
         ConfigureLifetimeLogging(app.Lifetime);
+
         // app running
         app.Run(async context =>
         {
+            /*
             // context에 적합한 protocol에 매칭
-            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] context.Request.Path.ToString().ToLower()[1..] " + context.Request.Path.ToString().ToLower()[1..]);
-            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] ConvertToReqType() " + RouterHelper.ConvertToReqType(context.Request.Path.ToString().ToLower()[1..]));
+            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] context.Request.Path.ToString(). ()[1..] " + context.Request.Path.ToString().ToLower()[1..]);
+            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] ConvertToReqType() " + RouteDispatcher.ConvertToReqType(context.Request.Path.ToString().ToLower()[1..]));
             // 
-            if (dispatcher!.TryGetValue(RouterHelper.ConvertToReqType(context.Request.Path.ToString().ToLower()[1..])
+            if (dispatcher!.TryGetValue(RouteDispatcher.ConvertToReqType(context.Request.Path.ToString().ToLower()[1..])
                 , out Func<IProtocol>? protocol))
                 await protocol().InvokeAsync(context);
             else
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;     // 404 error
+            */
+
+            var path = context.Request.Path.ToString().ToLower()[1..];
+            var protocolKey = RouteDispatcher.ConvertToReqType(path);
+            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] path " + path);
+            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] protocolKey " + protocolKey);
+
+
+            // root endpoint         
+            if (path == "")
+            {
+                context.Response.StatusCode = (int)HttpStatusCode.OK; // 200 OK
+                await context.Response.WriteAsync("Welcome to Jykoserver! Use /Ping or /Send endpoints.");
+                return;
+            }
+
+            // dispatcher에서 프로토콜 찾기
+            if (dispatcher!.TryGetValue(protocolKey, out Func<IProtocol>? protocol))
+            {
+                await protocol().InvokeAsync(context);
+            }
+            else
+            {
+                context.Response.StatusCode = (int)HttpStatusCode.NotFound; // 404 error
+                await context.Response.WriteAsync("Endpoint not found.");
+            }
+
         });
+        
         app.Run();
 
     }
@@ -69,10 +99,10 @@ public class Program
     private static void ConfigureLifetimeLogging(IHostApplicationLifetime lifetime)
     {
         lifetime.ApplicationStarted.Register(() =>
-            Log.Logger.ForContext("Type", "SYS").Information("[MyServer] Start Execution.")
+            Log.Logger.ForContext("Type", "SYS").Information("[Jykoserver] INIT :: Start Execution.")
         );
         lifetime.ApplicationStopping.Register(() =>
-            Log.Logger.ForContext("Type", "SYS").Information("[MyServer] Closing...")
+            Log.Logger.ForContext("Type", "SYS").Information("[Jykoserver] END :: Closing...")
         );
     }
 

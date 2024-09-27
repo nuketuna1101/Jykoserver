@@ -1,12 +1,374 @@
-2024-09-26 15:54:36.824 +09:00 [INF] Now listening on: https://localhost:7233
-2024-09-26 15:54:36.847 +09:00 [INF] Now listening on: http://localhost:5199
-2024-09-26 15:54:36.869 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-2024-09-26 15:54:36.957 +09:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-26 15:54:36.957 +09:00 [INF] Hosting environment: Development
-2024-09-26 15:54:36.958 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
-2024-09-26 15:54:36.958 +09:00 [INF] [MyServer] Start Execution.
-2024-09-26 15:54:37.408 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
-2024-09-26 15:54:37.991 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 404 0 null 584.3782ms
-2024-09-26 15:54:37.994 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7233/, Response status code: 404
-2024-09-26 15:54:42.630 +09:00 [INF] Application is shutting down...
-2024-09-26 15:54:42.630 +09:00 [INF] [MyServer] Closing...
+2024-09-26 16:54:26.836 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 16:54:26.854 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 16:54:26.859 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 16:54:26.878 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 16:54:26.878 +09:00 [INF] Hosting environment: Development
+2024-09-26 16:54:26.878 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 16:54:26.883 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 16:54:27.302 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 16:54:27.553 +09:00 [INF]  [appRun] context.Request.Path.ToString().ToLower()[1..] 
+2024-09-26 16:54:27.553 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 16:54:27.555 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 404 0 null 254.2803ms
+2024-09-26 16:56:38.368 +09:00 [INF] Application is shutting down...
+2024-09-26 16:56:38.368 +09:00 [INF] [MyServer] Closing...
+2024-09-26 16:56:42.120 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 16:56:42.145 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 16:56:42.146 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 16:56:42.232 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 16:56:42.233 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 16:56:42.237 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 16:56:42.256 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 16:56:42.257 +09:00 [INF] Hosting environment: Development
+2024-09-26 16:56:42.257 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 16:56:42.257 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 16:56:42.494 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 16:56:42.743 +09:00 [INF]  [appRun] context.Request.Path.ToString().ToLower()[1..] 
+2024-09-26 16:56:42.743 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 16:56:42.745 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 16:56:42.786 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 16:56:42.851 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 500 null text/html; charset=utf-8 357.3516ms
+2024-09-26 16:56:42.862 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-09-26 16:56:42.862 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-26 16:56:42.864 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.4851ms
+2024-09-26 16:56:42.891 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.3729ms
+2024-09-26 16:56:42.935 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 16:56:42.935 +09:00 [INF]  [appRun] context.Request.Path.ToString().ToLower()[1..] favicon.ico
+2024-09-26 16:56:42.935 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 16:56:42.935 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 16:56:42.935 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 16:56:42.936 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 500 null text/plain; charset=utf-8 1.9884ms
+2024-09-26 16:58:44.063 +09:00 [INF] Application is shutting down...
+2024-09-26 16:58:44.063 +09:00 [INF] [MyServer] Closing...
+2024-09-26 17:07:27.952 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:07:27.976 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:07:27.976 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:07:28.064 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:07:28.065 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:07:28.069 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:07:28.089 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:07:28.089 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:07:28.089 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:07:28.089 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 17:07:28.377 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:07:28.624 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:07:28.624 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:07:28.625 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:07:28.656 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:07:28.694 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 500 null text/html; charset=utf-8 318.0659ms
+2024-09-26 17:07:28.704 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-09-26 17:07:28.704 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-26 17:07:28.707 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.8281ms
+2024-09-26 17:07:28.721 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.7095ms
+2024-09-26 17:07:28.734 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:07:28.735 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:07:28.735 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:07:28.735 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:07:28.735 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:07:28.737 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 500 null text/plain; charset=utf-8 3.3263ms
+2024-09-26 17:07:47.967 +09:00 [INF] Application is shutting down...
+2024-09-26 17:07:47.968 +09:00 [INF] [MyServer] Closing...
+2024-09-26 17:08:09.462 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:09.487 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:09.487 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:09.573 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:08:09.574 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:08:09.579 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:08:09.599 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:08:09.600 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:08:09.600 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:08:09.600 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 17:08:09.892 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:08:10.140 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:08:10.141 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:08:10.142 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:08:10.173 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:08:10.212 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 500 null text/html; charset=utf-8 320.3131ms
+2024-09-26 17:08:10.219 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-26 17:08:10.219 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-09-26 17:08:10.221 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.5133ms
+2024-09-26 17:08:10.235 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.6049ms
+2024-09-26 17:08:10.246 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:08:10.246 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:08:10.246 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:08:10.246 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:08:10.247 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:08:10.248 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 500 null text/plain; charset=utf-8 1.7582ms
+2024-09-26 17:08:21.318 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:21.343 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:21.343 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:21.431 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:08:21.432 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:08:21.436 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:08:21.456 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:08:21.457 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:08:21.457 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:08:21.457 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 17:08:34.240 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:34.268 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:34.268 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:08:34.373 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:08:34.373 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:08:34.378 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:08:34.399 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:08:34.400 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:08:34.400 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:08:34.400 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 17:08:34.813 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:08:35.059 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:08:35.060 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:08:35.061 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:08:35.092 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:08:35.118 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 500 null text/html; charset=utf-8 305.5358ms
+2024-09-26 17:08:35.123 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-09-26 17:08:35.123 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-26 17:08:35.126 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.1961ms
+2024-09-26 17:08:35.139 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.6555ms
+2024-09-26 17:08:35.180 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:08:35.180 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:08:35.180 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:08:35.180 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:08:35.181 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:08:35.182 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 500 null text/plain; charset=utf-8 1.994ms
+2024-09-26 17:10:27.000 +09:00 [INF] Application is shutting down...
+2024-09-26 17:10:27.000 +09:00 [INF] [MyServer] Closing...
+2024-09-26 17:10:29.993 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:10:30.018 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:10:30.018 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:10:30.104 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:10:30.105 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:10:30.110 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:10:30.129 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:10:30.129 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:10:30.129 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:10:30.130 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 17:10:30.431 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:10:30.678 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:10:30.678 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:10:30.679 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:10:30.713 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:10:30.752 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 500 null text/html; charset=utf-8 321.7259ms
+2024-09-26 17:10:30.758 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-09-26 17:10:30.758 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-26 17:10:30.760 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 1.8407ms
+2024-09-26 17:10:30.773 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.4833ms
+2024-09-26 17:10:30.784 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:10:30.784 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:10:30.784 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:10:30.784 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:10:30.784 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Echo.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Echo.cs:line 16
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:10:30.786 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 500 null text/plain; charset=utf-8 1.8514ms
+2024-09-26 17:10:34.432 +09:00 [INF] Application is shutting down...
+2024-09-26 17:10:34.432 +09:00 [INF] [MyServer] Closing...
+2024-09-26 17:10:50.446 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:10:50.471 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:10:50.471 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:10:50.561 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:10:50.561 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:10:50.566 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:10:50.586 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:10:50.586 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:10:50.586 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:10:50.586 +09:00 [INF] [MyServer] Start Execution.
+2024-09-26 17:10:50.900 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:10:51.157 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:10:51.158 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:10:51.158 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:10:51.160 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 0 null 260.1714ms
+2024-09-26 17:10:51.172 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:10:51.172 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:10:51.172 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:10:51.172 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:10:51.172 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 0 null 0.2974ms
+2024-09-26 17:11:15.016 +09:00 [INF] Application is shutting down...
+2024-09-26 17:11:15.016 +09:00 [INF] [MyServer] Closing...
+2024-09-26 17:15:19.377 +09:00 [INF] protocol.reqType: "ECHO" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:15:19.403 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:15:19.403 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:15:19.492 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:15:19.492 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:15:19.497 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:15:19.517 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:15:19.517 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:15:19.517 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:15:19.517 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-09-26 17:15:19.877 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:15:20.123 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:15:20.123 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:15:20.124 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:15:20.126 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 0 null 249.0274ms
+2024-09-26 17:15:20.139 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:15:20.139 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:15:20.139 +09:00 [INF]  [appRun] ConvertToReqType() ECHO
+2024-09-26 17:15:20.139 +09:00 [INF] +--+ ECHO iprotocol invoked
+2024-09-26 17:15:20.140 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 0 null 0.3262ms
+2024-09-26 17:15:26.904 +09:00 [INF] Application is shutting down...
+2024-09-26 17:15:26.904 +09:00 [INF] [Jykoserver] END :: Closing...
+2024-09-26 17:17:40.379 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:17:40.403 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-26 17:17:40.490 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-26 17:17:40.491 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-26 17:17:40.495 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-26 17:17:40.515 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 17:17:40.515 +09:00 [INF] Hosting environment: Development
+2024-09-26 17:17:40.515 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-26 17:17:40.516 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-09-26 17:17:40.885 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-26 17:17:41.138 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] 
+2024-09-26 17:17:41.138 +09:00 [INF]  [appRun] ConvertToReqType() PING
+2024-09-26 17:17:41.139 +09:00 [INF] +--+ PING invoked
+2024-09-26 17:17:41.171 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at MemoryPack.Formatters.StringFormatter.Deserialize(MemoryPackReader& reader, String& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Ping.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Ping.cs:line 20
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:17:41.219 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 500 null text/html; charset=utf-8 335.0171ms
+2024-09-26 17:17:41.230 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-26 17:17:41.230 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-09-26 17:17:41.232 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.1258ms
+2024-09-26 17:17:41.247 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.1034ms
+2024-09-26 17:17:41.276 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-26 17:17:41.276 +09:00 [INF]  [appRun] context.Request.Path.ToString(). ()[1..] favicon.ico
+2024-09-26 17:17:41.276 +09:00 [INF]  [appRun] ConvertToReqType() PING
+2024-09-26 17:17:41.276 +09:00 [INF] +--+ PING invoked
+2024-09-26 17:17:41.276 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at MemoryPack.Formatters.StringFormatter.Deserialize(MemoryPackReader& reader, String& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Ping.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Ping.cs:line 20
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 50
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-26 17:17:41.278 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 500 null text/plain; charset=utf-8 2.0356ms
+2024-09-26 17:18:12.712 +09:00 [INF] Application is shutting down...
+2024-09-26 17:18:12.712 +09:00 [INF] [Jykoserver] END :: Closing...
