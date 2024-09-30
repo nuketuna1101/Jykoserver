@@ -42,18 +42,6 @@ public class Program
         // app running
         app.Run(async context =>
         {
-            /*
-            // context에 적합한 protocol에 매칭
-            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] context.Request.Path.ToString(). ()[1..] " + context.Request.Path.ToString().ToLower()[1..]);
-            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] ConvertToReqType() " + RouteDispatcher.ConvertToReqType(context.Request.Path.ToString().ToLower()[1..]));
-            // 
-            if (dispatcher!.TryGetValue(RouteDispatcher.ConvertToReqType(context.Request.Path.ToString().ToLower()[1..])
-                , out Func<IProtocol>? protocol))
-                await protocol().InvokeAsync(context);
-            else
-                context.Response.StatusCode = (int)HttpStatusCode.NotFound;     // 404 error
-            */
-
             var path = context.Request.Path.ToString().ToLower()[1..];
             var protocolKey = RouteDispatcher.ConvertToReqType(path);
             Log.Logger.ForContext("Type", "SYS").Information(" [appRun] path " + path);
@@ -61,10 +49,10 @@ public class Program
 
 
             // root endpoint         
-            if (path == "")
+            if (path == "" || path == "favicon.ico")
             {
                 context.Response.StatusCode = (int)HttpStatusCode.OK; // 200 OK
-                await context.Response.WriteAsync("Welcome to Jykoserver! Use /Ping or /Send endpoints.");
+                await context.Response.WriteAsync("Welcome to Jykoserver!");
                 return;
             }
 

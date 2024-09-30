@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\logs\\log20240925.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\logs\\log20240925.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\logs\\log20240926.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\logs\\log20240926.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\protocols\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\protocols\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\logs\\log20240930.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\logs\\log20240930.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\protocols\\routedispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\protocols\\routedispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\protocols\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\protocols\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\protocols\\send.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +21,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\protocols\\iprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\protocols\\iprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\logs\\log20240925.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\logs\\log20240925.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\logs\\log20240926.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\logs\\log20240926.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|c:\\users\\ghj45\\source\\repos\\jykoserver\\jykoserver\\protocols\\routedispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81CE4A9C-7306-438D-B1E4-13CDD76806EF}|Jykoserver\\Jykoserver.csproj|solutionrelative:jykoserver\\protocols\\routedispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "log20240930.txt",
+              "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Logs\\log20240930.txt",
+              "RelativeDocumentMoniker": "Jykoserver\\Logs\\log20240930.txt",
+              "ToolTip": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Logs\\log20240930.txt",
+              "RelativeToolTip": "Jykoserver\\Logs\\log20240930.txt",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-09-30T01:19:22.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "log20240925.txt",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Logs\\log20240925.txt",
               "RelativeDocumentMoniker": "Jykoserver\\Logs\\log20240925.txt",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "log20240926.txt",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Logs\\log20240926.txt",
               "RelativeDocumentMoniker": "Jykoserver\\Logs\\log20240926.txt",
@@ -63,37 +80,37 @@
               "RelativeToolTip": "Jykoserver\\Logs\\log20240926.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-27T08:51:26.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T08:51:26.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Program.cs",
               "RelativeDocumentMoniker": "Jykoserver\\Program.cs",
               "ToolTip": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Program.cs",
               "RelativeToolTip": "Jykoserver\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAgwEUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T08:11:48.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Ping.cs",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Protocols\\Ping.cs",
               "RelativeDocumentMoniker": "Jykoserver\\Protocols\\Ping.cs",
               "ToolTip": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Protocols\\Ping.cs",
               "RelativeToolTip": "Jykoserver\\Protocols\\Ping.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA8wBMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T07:44:24.506Z"
+              "WhenOpened": "2024-09-26T07:44:24.506Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "RouteDispatcher.cs",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Protocols\\RouteDispatcher.cs",
               "RelativeDocumentMoniker": "Jykoserver\\Protocols\\RouteDispatcher.cs",
@@ -105,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "IProtocol.cs",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Protocols\\IProtocol.cs",
               "RelativeDocumentMoniker": "Jykoserver\\Protocols\\IProtocol.cs",
@@ -113,19 +130,21 @@
               "RelativeToolTip": "Jykoserver\\Protocols\\IProtocol.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T01:13:22.219Z"
+              "WhenOpened": "2024-09-26T01:13:22.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Send.cs",
               "DocumentMoniker": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Protocols\\Send.cs",
               "RelativeDocumentMoniker": "Jykoserver\\Protocols\\Send.cs",
               "ToolTip": "C:\\Users\\ghj45\\source\\repos\\Jykoserver\\Jykoserver\\Protocols\\Send.cs",
               "RelativeToolTip": "Jykoserver\\Protocols\\Send.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBMAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T01:12:03.991Z"
+              "WhenOpened": "2024-09-26T01:12:03.991Z",
+              "EditorCaption": ""
             }
           ]
         }

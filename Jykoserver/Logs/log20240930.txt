@@ -1,0 +1,52 @@
+2024-09-30 10:18:59.795 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-30 10:18:59.824 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-30 10:18:59.989 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-30 10:18:59.990 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-30 10:19:00.000 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-30 10:19:00.024 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-30 10:19:00.024 +09:00 [INF] Hosting environment: Development
+2024-09-30 10:19:00.024 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-30 10:19:00.025 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-09-30 10:19:00.353 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-30 10:19:00.639 +09:00 [INF]  [appRun] path 
+2024-09-30 10:19:00.639 +09:00 [INF]  [appRun] protocolKey PING
+2024-09-30 10:19:00.643 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 null null 291.0996ms
+2024-09-30 10:19:00.665 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-30 10:19:00.665 +09:00 [INF]  [appRun] path favicon.ico
+2024-09-30 10:19:00.665 +09:00 [INF]  [appRun] protocolKey PING
+2024-09-30 10:19:00.666 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.3192ms
+2024-09-30 10:19:11.127 +09:00 [INF] Request starting HTTP/1.1 POST https://localhost:7233/Ping - null 12
+2024-09-30 10:19:11.127 +09:00 [INF]  [appRun] path ping
+2024-09-30 10:19:11.128 +09:00 [INF]  [appRun] protocolKey PING
+2024-09-30 10:19:11.129 +09:00 [INF] +--+ PING invoked
+2024-09-30 10:19:11.168 +09:00 [INF] ::::::::::::::::::Received request body: Ping
+2024-09-30 10:19:11.169 +09:00 [INF] ping dateTime : 638632559511690193
+2024-09-30 10:19:11.173 +09:00 [INF] Request finished HTTP/1.1 POST https://localhost:7233/Ping - 200 null null 45.8479ms
+2024-09-30 10:19:17.647 +09:00 [INF] Application is shutting down...
+2024-09-30 10:19:17.647 +09:00 [INF] [Jykoserver] END :: Closing...
+2024-09-30 10:39:26.475 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-30 10:39:26.500 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-09-30 10:39:26.591 +09:00 [INF] Now listening on: https://localhost:7233
+2024-09-30 10:39:26.592 +09:00 [INF] Now listening on: http://localhost:5199
+2024-09-30 10:39:26.597 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-30 10:39:26.617 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-30 10:39:26.618 +09:00 [INF] Hosting environment: Development
+2024-09-30 10:39:26.618 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-09-30 10:39:26.618 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-09-30 10:39:26.973 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-09-30 10:39:27.232 +09:00 [INF]  [appRun] path 
+2024-09-30 10:39:27.233 +09:00 [INF]  [appRun] protocolKey PING
+2024-09-30 10:39:27.235 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 null null 263.3616ms
+2024-09-30 10:39:27.260 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-09-30 10:39:27.260 +09:00 [INF]  [appRun] path favicon.ico
+2024-09-30 10:39:27.260 +09:00 [INF]  [appRun] protocolKey PING
+2024-09-30 10:39:27.260 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.3359ms
+2024-09-30 10:39:35.009 +09:00 [INF] Request starting HTTP/1.1 POST https://localhost:7233/Ping - null 33
+2024-09-30 10:39:35.010 +09:00 [INF]  [appRun] path ping
+2024-09-30 10:39:35.010 +09:00 [INF]  [appRun] protocolKey PING
+2024-09-30 10:39:35.012 +09:00 [INF] +--+ PING invoked
+2024-09-30 10:39:35.054 +09:00 [INF] ::::::::::::::::::Received request body: Jykoserver.Request
+2024-09-30 10:39:35.054 +09:00 [INF] ping dateTime : 638632571750544688
+2024-09-30 10:39:35.056 +09:00 [INF] Request finished HTTP/1.1 POST https://localhost:7233/Ping - 200 null null 46.5157ms
+2024-09-30 10:39:42.272 +09:00 [INF] Application is shutting down...
+2024-09-30 10:39:42.272 +09:00 [INF] [Jykoserver] END :: Closing...
