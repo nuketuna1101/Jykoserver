@@ -17,7 +17,7 @@ namespace Jykoserver.Protocols
         {
             //convert current time into byte array and write into response
             Log.Logger.ForContext("Type", "SYS").Information("+--+ PING invoked");
-            var req = await MemoryPackSerializer.DeserializeAsync<Request>(httpContext.Request.Body);
+            Request? req = await MemoryPackSerializer.DeserializeAsync<Request>(httpContext.Request.Body);
             var myGUID = req.UserGUID;
             var myMsg = MemoryPackSerializer.Deserialize<string>(req.Msg);
             Log.Logger.ForContext("Type", "SYS").Information("::::::::::::::::::Received request body: {0}", req);
@@ -27,6 +27,18 @@ namespace Jykoserver.Protocols
                 httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;   // 400 error
                 return;
             }
+
+            if (myGUID != null)
+            {
+                var cm = ClientManager.Instance;
+                cm.AddClient(new ClientInfo
+                {
+                    guid = myGUID,
+                    PingTime = DateTime.UtcNow,
+                });
+                cm.LogAllClients();
+            }
+
             //normal flow
             Log.Logger.ForContext("Type", "SYS").Information("ping dateTime : {0}", DateTime.UtcNow.Ticks);
             var response = MemoryPackSerializer.Serialize(DateTime.UtcNow.Ticks);
