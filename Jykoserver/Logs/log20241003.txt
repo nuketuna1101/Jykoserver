@@ -1,0 +1,107 @@
+2024-10-03 15:40:51.223 +09:00 [INF] protocol.reqType: "CHAT" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:40:51.257 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:40:51.257 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:40:51.257 +09:00 [INF] protocol.reqType: "WSH" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:40:51.397 +09:00 [INF] Now listening on: https://localhost:7233
+2024-10-03 15:40:51.398 +09:00 [INF] Now listening on: http://localhost:5199
+2024-10-03 15:40:51.410 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-03 15:40:51.433 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-03 15:40:51.433 +09:00 [INF] Hosting environment: Development
+2024-10-03 15:40:51.433 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-10-03 15:40:51.434 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-10-03 15:40:52.009 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-10-03 15:40:52.282 +09:00 [INF]  [appRun] path 
+2024-10-03 15:40:52.282 +09:00 [INF]  [appRun] protocolKey PING
+2024-10-03 15:40:52.287 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 null null 277.9139ms
+2024-10-03 15:40:52.308 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-10-03 15:40:52.308 +09:00 [INF]  [appRun] path favicon.ico
+2024-10-03 15:40:52.308 +09:00 [INF]  [appRun] protocolKey PING
+2024-10-03 15:40:52.308 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.3395ms
+2024-10-03 15:41:09.273 +09:00 [INF] Request starting HTTP/1.1 GET https://localhost:7233/Websockethandler - null null
+2024-10-03 15:41:09.273 +09:00 [INF]  [appRun] path websockethandler
+2024-10-03 15:41:09.273 +09:00 [INF]  [appRun] protocolKey WSH
+2024-10-03 15:41:09.275 +09:00 [INF] +--+ WebsocketHandler invoked
+2024-10-03 15:41:09.276 +09:00 [INF] +--+ httpContext.WebSockets.IsWebSocketRequest : True
+2024-10-03 15:41:09.315 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.WebsocketHandler.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\WebsocketHandler.cs:line 25
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__1>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 71
+--- End of stack trace from previous location ---
+   at Jykoserver.Program.<>c.<<Main>b__0_0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 46
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-03 15:41:09.337 +09:00 [INF] Request finished HTTP/1.1 GET https://localhost:7233/Websockethandler - 500 null text/plain; charset=utf-8 64.2013ms
+2024-10-03 15:41:52.900 +09:00 [INF] Application is shutting down...
+2024-10-03 15:41:52.900 +09:00 [INF] [Jykoserver] END :: Closing...
+2024-10-03 15:43:12.725 +09:00 [INF] protocol.reqType: "CHAT" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:43:12.749 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:43:12.749 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:43:12.750 +09:00 [INF] protocol.reqType: "WSH" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:43:12.836 +09:00 [INF] Now listening on: https://localhost:7233
+2024-10-03 15:43:12.836 +09:00 [INF] Now listening on: http://localhost:5199
+2024-10-03 15:43:12.841 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-03 15:43:12.860 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-03 15:43:12.861 +09:00 [INF] Hosting environment: Development
+2024-10-03 15:43:12.861 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-10-03 15:43:12.861 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-10-03 15:43:13.319 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-10-03 15:43:13.565 +09:00 [INF]  [appRun] path 
+2024-10-03 15:43:13.565 +09:00 [INF]  [appRun] protocolKey PING
+2024-10-03 15:43:13.568 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 null null 250.0971ms
+2024-10-03 15:43:13.594 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-10-03 15:43:13.595 +09:00 [INF]  [appRun] path favicon.ico
+2024-10-03 15:43:13.595 +09:00 [INF]  [appRun] protocolKey PING
+2024-10-03 15:43:13.595 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.3289ms
+2024-10-03 15:43:17.812 +09:00 [INF] Request starting HTTP/1.1 GET https://localhost:7233/Websockethandler - null null
+2024-10-03 15:43:17.812 +09:00 [INF]  [appRun] path websockethandler
+2024-10-03 15:43:17.812 +09:00 [INF]  [appRun] protocolKey WSH
+2024-10-03 15:43:17.813 +09:00 [INF] +--+ WebsocketHandler invoked
+2024-10-03 15:43:17.814 +09:00 [INF] +--+ httpContext.WebSockets.IsWebSocketRequest : True
+2024-10-03 15:43:17.846 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.WebsocketHandler.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\WebsocketHandler.cs:line 25
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__1>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 71
+--- End of stack trace from previous location ---
+   at Jykoserver.Program.<>c.<<Main>b__0_0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 46
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-03 15:43:17.864 +09:00 [INF] Request finished HTTP/1.1 GET https://localhost:7233/Websockethandler - 500 null text/plain; charset=utf-8 52.541ms
+2024-10-03 15:43:22.437 +09:00 [INF] Application is shutting down...
+2024-10-03 15:43:22.437 +09:00 [INF] [Jykoserver] END :: Closing...
+2024-10-03 15:45:27.835 +09:00 [INF] protocol.reqType: "CHAT" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:45:27.864 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:45:27.864 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:45:27.865 +09:00 [INF] protocol.reqType: "WSH" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-03 15:45:27.971 +09:00 [INF] Now listening on: https://localhost:7233
+2024-10-03 15:45:27.972 +09:00 [INF] Now listening on: http://localhost:5199
+2024-10-03 15:45:27.978 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-03 15:45:28.003 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-03 15:45:28.004 +09:00 [INF] Hosting environment: Development
+2024-10-03 15:45:28.004 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-10-03 15:45:28.004 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-10-03 15:45:28.393 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-10-03 15:45:28.646 +09:00 [INF]  [appRun] path 
+2024-10-03 15:45:28.646 +09:00 [INF]  [appRun] protocolKey PING
+2024-10-03 15:45:28.650 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 null null 256.9626ms
+2024-10-03 15:45:28.742 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-10-03 15:45:28.742 +09:00 [INF]  [appRun] path favicon.ico
+2024-10-03 15:45:28.743 +09:00 [INF]  [appRun] protocolKey PING
+2024-10-03 15:45:28.743 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.4237ms
+2024-10-03 15:45:34.221 +09:00 [INF] Request starting HTTP/1.1 GET https://localhost:7233/ws - null null
+2024-10-03 15:45:41.947 +09:00 [INF] [Jykoserver] HandleWebSocketAsync on running
+2024-10-03 15:45:49.254 +09:00 [INF] Application is shutting down...
+2024-10-03 15:45:49.255 +09:00 [INF] [Jykoserver] END :: Closing...

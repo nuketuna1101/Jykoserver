@@ -1,0 +1,31 @@
+2024-10-15 16:25:14.336 +09:00 [INF] protocol.reqType: "CHAT" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-15 16:25:14.372 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-15 16:25:14.372 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-15 16:25:14.373 +09:00 [INF] protocol.reqType: "WSH" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-15 16:25:14.518 +09:00 [INF] Now listening on: https://localhost:7233
+2024-10-15 16:25:14.518 +09:00 [INF] Now listening on: http://localhost:5199
+2024-10-15 16:25:14.529 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-15 16:25:14.553 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-15 16:25:14.553 +09:00 [INF] Hosting environment: Development
+2024-10-15 16:25:14.553 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-10-15 16:25:14.554 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-10-15 16:25:14.961 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/ - null null
+2024-10-15 16:25:15.249 +09:00 [INF] [appRun] path 
+2024-10-15 16:25:15.249 +09:00 [INF] [appRun] protocolKey PING
+2024-10-15 16:25:15.253 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/ - 200 null null 292.5454ms
+2024-10-15 16:25:15.278 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-10-15 16:25:15.278 +09:00 [INF] [appRun] path favicon.ico
+2024-10-15 16:25:15.278 +09:00 [INF] [appRun] protocolKey PING
+2024-10-15 16:25:15.278 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.3709ms
+2024-10-15 16:25:33.610 +09:00 [INF] Request starting HTTP/1.1 GET https://localhost:7233/ws - null null
+2024-10-15 16:25:51.074 +09:00 [INF] Request starting HTTP/1.1 POST https://localhost:7233/Send - null 39
+2024-10-15 16:25:51.076 +09:00 [INF] [appRun] path send
+2024-10-15 16:25:51.076 +09:00 [INF] [appRun] protocolKey SEND
+2024-10-15 16:25:51.080 +09:00 [INF] +--+ Send iprotocol invoked
+2024-10-15 16:25:51.147 +09:00 [INF] [Request] from GUID: "bedf770d-a3bd-421f-ac03-648cbcb53df0"
+2024-10-15 16:25:51.148 +09:00 [INF] [Request] Message: test input
+2024-10-15 16:25:51.153 +09:00 [INF] Request finished HTTP/1.1 POST https://localhost:7233/Send - 200 0 null 78.9661ms
+2024-10-15 16:25:54.865 +09:00 [INF] [Jykoserver] [WebSocket] HandleWebSocketAsync on running
+2024-10-15 16:25:54.865 +09:00 [INF] [Jykoserver] [WebSocket] Received Text Message: test input
+2024-10-15 16:26:56.704 +09:00 [INF] Application is shutting down...
+2024-10-15 16:26:56.704 +09:00 [INF] [Jykoserver] END :: Closing...

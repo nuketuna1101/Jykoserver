@@ -32,6 +32,10 @@ namespace Jykoserver.Protocols
                     return RequestType.PING;
                 case "send":
                     return RequestType.SEND;
+                case "chat":
+                    return RequestType.CHAT;
+                case "websockethandler":
+                    return RequestType.WSH;
                 default:
                     return RequestType.PING;
             }

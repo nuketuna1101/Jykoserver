@@ -18,7 +18,8 @@ namespace Jykoserver.Protocols
             Request? req = await MemoryPackSerializer.DeserializeAsync<Request>(httpContext.Request.Body);
             var myGUID = req.UserGUID;
             var myMsg = MemoryPackSerializer.Deserialize<string>(req.Msg);
-            Log.Logger.ForContext("Type", "SYS").Information("::::::::::::::::::Received request body: {0}", req);
+            Log.Logger.ForContext("Type", "SYS").Information("[Request] from GUID: {0}", myGUID);
+            Log.Logger.ForContext("Type", "SYS").Information("[Request] Message: {0}", myMsg);
             // response 생성
             var response = MemoryPackSerializer.Serialize(new Response
             {
@@ -29,20 +30,5 @@ namespace Jykoserver.Protocols
 
             return;
         }
-
-        private async Task Broadcast(ClientInfo client, string message)
-        {
-            try
-            {
-                Log.Logger.ForContext("Type", "SYS").Information("[Send] Send message to client: {0}", client.guid);                using var clientResponse = await ClientManager.HttpClient.PostAsync(client.ClientUri, new StringContent(message));
-                //using var clientResponse = await ClientManager.HttpClient.PostAsync(client.ClientUri, new StringContent(message));
-
-
-            }
-            catch (Exception ex)
-            {
-                Log.Logger.ForContext("Type", "SYS").Error("Failed to send message to client: {0}. Error: {1}", client.guid, ex.Message);
-
-            }
-        }
+    }
 }

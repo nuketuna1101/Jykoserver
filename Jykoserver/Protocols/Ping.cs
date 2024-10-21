@@ -20,10 +20,12 @@ namespace Jykoserver.Protocols
             Request? req = await MemoryPackSerializer.DeserializeAsync<Request>(httpContext.Request.Body);
             var myGUID = req.UserGUID;
             var myMsg = MemoryPackSerializer.Deserialize<string>(req.Msg);
-            Log.Logger.ForContext("Type", "SYS").Information("::::::::::::::::::Received request body: {0}", req);
+            Log.Logger.ForContext("Type", "SYS").Information("[Request] from GUID: {0}", myGUID);
+            Log.Logger.ForContext("Type", "SYS").Information("[Request] Message: {0}", myMsg);
             // bad request flow
             if (req == null || !myMsg.Equals("Ping"))
             {
+                Log.Logger.ForContext("Type", "SYS").Error("[Request Error] request is either null or NOT Ping");
                 httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;   // 400 error
                 return;
             }
@@ -44,30 +46,6 @@ namespace Jykoserver.Protocols
             var response = MemoryPackSerializer.Serialize(DateTime.UtcNow.Ticks);
             await httpContext.Response.Body.WriteAsync(response.AsMemory(0, response.Length));
             return;
-
-
-
-            /*
-             레거시코드
-            //convert current time into byte array and write into response
-            Log.Logger.ForContext("Type", "SYS").Information("+--+ PING invoked");
-            var req = await MemoryPackSerializer.DeserializeAsync<string>(httpContext.Request.Body);
-            Log.Logger.ForContext("Type", "SYS").Information("::::::::::::::::::Received request body: {0}", req);
-            // bad request flow
-            if (req == null || !req.Equals("Ping"))
-            {
-                httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;   // 400 error
-                return;
-            }
-            //normal flow
-            Log.Logger.ForContext("Type", "SYS").Information("ping dateTime : {0}", DateTime.UtcNow.Ticks);
-            var response = MemoryPackSerializer.Serialize(DateTime.UtcNow.Ticks);
-            await httpContext.Response.Body.WriteAsync(response.AsMemory(0, response.Length));
-            return;
-             
-             
-             */
         }
-
     }
 }

@@ -1,0 +1,39 @@
+2024-10-21 16:34:31.790 +09:00 [INF] protocol.reqType: "CHAT" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-21 16:34:31.829 +09:00 [INF] protocol.reqType: "PING" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-21 16:34:31.829 +09:00 [INF] protocol.reqType: "SEND" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-21 16:34:31.829 +09:00 [INF] protocol.reqType: "WSH" / iprotocol : System.Func`1[Jykoserver.Protocols.IProtocol]
+2024-10-21 16:34:31.982 +09:00 [INF] Now listening on: https://localhost:7233
+2024-10-21 16:34:31.983 +09:00 [INF] Now listening on: http://localhost:5199
+2024-10-21 16:34:32.002 +09:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-21 16:34:32.026 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-21 16:34:32.027 +09:00 [INF] Hosting environment: Development
+2024-10-21 16:34:32.027 +09:00 [INF] Content root path: C:\Users\ghj45\source\repos\Jykoserver\Jykoserver
+2024-10-21 16:34:32.027 +09:00 [INF] [Jykoserver] INIT :: Start Execution.
+2024-10-21 16:34:32.622 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/Logs/ - null null
+2024-10-21 16:34:33.408 +09:00 [INF] [appRun] path logs/
+2024-10-21 16:34:33.408 +09:00 [INF] [appRun] protocolKey PING
+2024-10-21 16:34:33.410 +09:00 [INF] +--+ PING invoked
+2024-10-21 16:34:33.449 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+MemoryPack.MemoryPackSerializationException: Sequence reached end, reader can not provide more buffer.
+   at MemoryPack.MemoryPackSerializationException.ThrowSequenceReachedEnd()
+   at MemoryPack.MemoryPackReader.GetNextSpan(Int32 sizeHint)
+   at Jykoserver.Request.MemoryPack.IMemoryPackable<Jykoserver.Request>.Deserialize(MemoryPackReader& reader, Request& value) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\obj\Debug\net8.0\MemoryPack.Generator\MemoryPack.Generator.MemoryPackGenerator\Jykoserver.Request.MemoryPackFormatter.g.cs:line 83
+   at MemoryPack.Formatters.MemoryPackableFormatter`1.Deserialize(MemoryPackReader& reader, T& value)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, T& value, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.Deserialize[T](ReadOnlySpan`1 buffer, MemoryPackSerializerOptions options)
+   at MemoryPack.MemoryPackSerializer.DeserializeAsync[T](Stream stream, MemoryPackSerializerOptions options, CancellationToken cancellationToken)
+   at Jykoserver.Protocols.Ping.InvokeAsync(HttpContext httpContext) in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Protocols\Ping.cs:line 20
+   at Jykoserver.Program.<>c__DisplayClass0_0.<<Main>b__1>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 73
+--- End of stack trace from previous location ---
+   at Jykoserver.Program.<>c.<<Main>b__0_0>d.MoveNext() in C:\Users\ghj45\source\repos\Jykoserver\Jykoserver\Program.cs:line 48
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-21 16:34:33.515 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/Logs/ - 500 null text/html; charset=utf-8 893.4666ms
+2024-10-21 16:34:33.525 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_vs/browserLink - null null
+2024-10-21 16:34:33.525 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-21 16:34:33.527 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.7559ms
+2024-10-21 16:34:33.554 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.3494ms
+2024-10-21 16:34:33.589 +09:00 [INF] Request starting HTTP/2 GET https://localhost:7233/favicon.ico - null null
+2024-10-21 16:34:33.589 +09:00 [INF] [appRun] path favicon.ico
+2024-10-21 16:34:33.589 +09:00 [INF] [appRun] protocolKey PING
+2024-10-21 16:34:33.589 +09:00 [INF] Request finished HTTP/2 GET https://localhost:7233/favicon.ico - 200 null null 0.4263ms

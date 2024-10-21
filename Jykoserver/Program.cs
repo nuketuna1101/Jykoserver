@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Builder;
 
 using System.Net;
 using Jykoserver.Protocols;
+using System.Net.WebSockets;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Concurrent;
+using System.Text;
 
 namespace Jykoserver;
 
@@ -17,35 +21,42 @@ public class Program
         ConfigureLogging(builder.Logging);
         // dispatcher 
         Dictionary<RequestType, Func<IProtocol>> dispatcher = RouteDispatcher.MapDispatcher();
-
-        var app = builder.Build();
-
-        /*
-        // chatmsg
-        var chatMsg = new List<ChatMessage>();
-        app.MapPost("/api/chat/send-message", (ChatMessage message) =>
-        {
-            chatMsg.Add(message); // 메시지 추가
-            return Results.Ok(); // 200 OK 응답
-        });
-
-        // 채팅 메시지 불러오기 엔드포인트
-        app.MapGet("/api/chat/get-messages", () =>
-        {
-            return Results.Ok(chatMsg); // 200 OK 응답과 함께 메시지 목록 반환
-        });
-        */
-
+        // app build
+        var app = builder.Build();   
         // lifetime logging
         ConfigureLifetimeLogging(app.Lifetime);
+        // websocket for chatting
+        app.UseWebSockets();
+        // websockethandling
+        app.Use(async(context, next) =>
+        {
+            if (context.Request.Path == "/ws")
+            {
+                if (context.WebSockets.IsWebSocketRequest)
+                {
+                    WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
+                    await HandleWebSocketAsync(context, webSocket); // WebSocket 처리
+                }
+                else
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.BadRequest; // 400 error
+                    Log.Logger.ForContext("Type", "SYS").Error("[ERROR] WebSocket BadRequest");
+                }
+            }
+            else
+            {
+                await next();
+            }
+        });
 
-        // app running
+
+        // app running: Routing for the endpoints
         app.Run(async context =>
         {
             var path = context.Request.Path.ToString().ToLower()[1..];
             var protocolKey = RouteDispatcher.ConvertToReqType(path);
-            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] path " + path);
-            Log.Logger.ForContext("Type", "SYS").Information(" [appRun] protocolKey " + protocolKey);
+            Log.Logger.ForContext("Type", "SYS").Information("[appRun] path " + path);
+            Log.Logger.ForContext("Type", "SYS").Information("[appRun] protocolKey " + protocolKey);
 
 
             // root endpoint         
@@ -94,54 +105,26 @@ public class Program
         );
     }
 
+    private static async Task HandleWebSocketAsync(HttpContext httpContext, WebSocket webSocket)
+    {
+        var buffer = new byte[1024 * 4];
+        WebSocketReceiveResult result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+        Log.Logger.ForContext("Type", "SYS").Information("[Jykoserver] [WebSocket] HandleWebSocketAsync on running");
+
+        while (!result.CloseStatus.HasValue)
+        {
+            // 메시지 내용 로깅
+            string receivedMessage = Encoding.UTF8.GetString(buffer, 0, result.Count);
+            Log.Logger.ForContext("Type", "SYS").Information("[Jykoserver] [WebSocket] Received Text Message: {Message}", receivedMessage);
+
+
+
+            // 클라이언트가 보내온 메시지를 처리 (ex: Echo 기능)
+            await webSocket.SendAsync(new ArraySegment<byte>(buffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
+            result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+        }
+
+        await webSocket.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
+
+    }
 }
-
-public class ChatMessage
-{
-    public string Sender { get; set; }
-    public string Message { get; set; }
-}
-
-
-
-
-
-
-
-#region ASP.NET Core 기본 코드 백업
-/*
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
-app.MapGet("/", () => "Hello World!");
-
-app.Run();
-
-*/
-#endregion
-
-#region gpt code
-/*
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllers(); // Controller 사용 등록
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
-
-app.UseHttpsRedirection();
-app.UseAuthorization();
-
-app.MapControllers(); // API 엔드포인트 매핑
-
-app.Run();
-
-
-*/
-#endregion

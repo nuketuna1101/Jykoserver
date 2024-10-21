@@ -6,6 +6,8 @@ namespace Jykoserver
     {
         PING = 20,
         SEND = 30,   
+        CHAT = 40,
+        WSH = 50,
     }
 
     [MemoryPackable]
